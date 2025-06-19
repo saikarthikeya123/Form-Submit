@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Contact Us</h2>
+
+    <form action="https://formsubmit.co/sairewards1041@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="text" name="subject" placeholder="Subject" required>
+
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Auto response to form filler -->
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting us. We have received your message.">
+
+        <!-- Redirect to thank you page after submit -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+        <!-- Prevent spam -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Set email subject -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+        <!-- Send copy to user -->
+        <input type="hidden" name="_cc" value="email">
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
